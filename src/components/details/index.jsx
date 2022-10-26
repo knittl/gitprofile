@@ -15,6 +15,7 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaStackExchange,
   FaStackOverflow,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -176,6 +177,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Stack Overflow:"
                   value={social.stackoverflow.split('/').slice(-1)}
                   link={`https://stackoverflow.com/users/${social.stackoverflow}`}
+                />
+              )}
+              {social?.stackexchange && (
+                <ListItem
+                  icon={<FaStackExchange className="mr-2" />}
+                  title="Stack Exchange:"
+                  value={social.stackexchange.split('/').slice(-1)}
+                  link={`https://stackexchange.com/users/${social.stackexchange}`}
                 />
               )}
               {social?.website && (
